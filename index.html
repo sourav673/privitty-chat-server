@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern HTML Email Template</title>
+<style type="text/css">
+	body {
+		margin: 0;
+	}
+    main{
+        max-width: 600px;
+        margin: 0px auto;
+        /* background-color: #c48686; */
+    }
+    section{
+        background-color: rgb(245, 234, 221);
+        padding: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    section .card{
+        width: 100%;
+        border-radius: 5px;
+        background-color: #F8F9FA;
+        border-left: 5px solid #007BFF;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px 5px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    section .card h5{
+        color: #007BFF;
+    }
+    ul { 
+        padding-inline-start: 20px; 
+    }
+</style>
+</head>
+<body>
+    <main>
+        <section>
+            <!-- <img src="./img/abstract.png" style="position: absolute; width: 50px;" alt="">  -->
+            <div style="border-radius: 20px; background-color: #E9E8FF; height: auto; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px;  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+               <img src="./img/privitty-qr.png" height="200px" alt="">
+               <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                <h2 style="font-weight: 900; line-height: 1.7rem;">DOWNLOAD</h1>
+                <h2 style="color: #4D50EC; font-weight: 900; line-height: 1.7rem;">PRIVITTY APP</h1>
+                <a href="https://drive.google.com/file/d/1vi4OmUGOYt19Zfx804Xou-XHcNY1dbnK/view?usp=sharing" style="border-radius: 20px; color: #fff; padding: 5px 12px; border: none; background-color: #4D50EC;">At Our Website</a>
+                <p>Or by scanning the QR code</p>
+               </div>
+            </div>
+        </section>
+        <section>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <img src="./img/gmail.png" width="40px" alt="">
+                    <h5 style="margin-top: 5px;">Gmail Setup Guide for Privitty Chat</h1>
+                </div>
+                <br>
+                <div class="card">
+                    <div>
+                        <img src="./img/password.svg" alt="">
+                    </div>
+                    <div>
+                        <h5>Step 1: Enable 2-Step Verification</h2>
+                        <p>Go to your Google Account and enable 2-Step Verification.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="./img/password2.svg" style="height: 5rem; margin-inline: -1.8rem; margin-top: -0.8rem;" alt="">
+                    </div>
+                    <div>
+                        <h5>Step 2: Generate an App-Specific Password</h2>
+                        <p>Visit <a href="https://myaccount.google.com/apppasswords">Google's App Passwords Page</a> and follow the instructions to generate a password.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="./img/login-finger-password-3.svg" alt="">
+                    </div>
+                    <div>
+                        <h5>Step 3: Log in to Privitty Chat</h2>
+                        <ul>
+                            <li>Create a new profile.</li>
+                            <li>Enter your name.</li>
+                            <li>Select Use Other Server.</li>
+                            <li>Choose Classic Email Login.</li>
+                            <li>Enter your Gmail ID and the App password.</li>
+                            <li>Click ✅ to proceed.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="./img/toggle-on.svg" style="height: 3rem; margin-top: -7px;" alt="">
+                    </div>
+                    <div>
+                        <h5>Step 4: Enable IMAP (If You Face Issues)</h2>
+                        <ul>
+                            <li>Go to ⚙️ Gmail Settings.</li>
+                            <li>Click See all settings.</li>
+                            <li>Navigate to Forwarding and POP/IMAP.</li>
+                            <li>Find IMAP access and select Enable IMAP.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEST RUN  -->
+         <!-- <section>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;">
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <h5 style="margin-top: 5px;">Setting up with nine.testrun.org</h1>
+                </div>
+                <br>
+                
+                <div class="card">
+                    <div>
+                        <img src="./img/password2.svg" style="height: 5rem; margin-inline: -1.8rem; margin-top: -0.8rem;" alt="">
+                    </div>
+                    <div>
+                        <h5>Step 1: Log in to Privitty Chat</h2>
+                        <ul>
+                            <li>Create new profile.</li>
+                            <li>Select Use Other Server.</li>
+                            <li>Choose Scan invitation code</li>
+                            <li>Scan this QR code</li>
+                            <img src="https://nine.testrun.org/qr-chatmail-invite-nine.testrun.org.png" width="80%" alt="">
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="./img/login-finger-password-3.svg" alt="">
+                    </div>
+                    <div>
+                        <h5>Step 4: Create profile</h2>
+                        <ul>
+                            <li>Enter your name</li>
+                            <li>Click on Agree & create profile</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section>
+            <div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="./img/message.svg" width="40px" alt="">
+                    <h5 style="margin-top: 5px;">Send your first Message</h1>
+                </div>
+                <p style="width: 80%; margin: auto; text-align: center;"">You can send a “Hello message” to Milind Deore <br>at <a href="mailto:milind.deore@privittytech.com">milind.deore@privittytech.com</a> to experience Privitty chat firsthand.</p>
+            </div>
+        </section>
+        <section>
+            <div style="text-align: center;">
+                <h5>Watch this quick tutorial</h5>
+                <a href="https://www.dropbox.com/scl/fi/tufsevn2tzh1vgg3nojbm/PrivittyWADemo.mp4?rlkey=s7grai1lokjnn9uli7y9fdggj&e=1&st=ybeeaeuq&dl=0">
+                    <img src="./img/how-to-use.png" alt="Watch Video" style="width: 100%; border-radius: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                </a>
+            </div> 
+        </section>
+        <section style="display: flex; justify-content: center; align-items: center; gap: 10px; background-color: #E1E1E1;">
+            <img src="./img/privitty-logo.png" width="100px" height="100px" alt="">
+            <div>
+                <h2 style="font-weight: 900; color: #4D50EC;">PRIVITTY CHAT</h1>
+                <P style="color: #686868;">© 2025 Privitty Tech. All Rights Reserved.</P>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
