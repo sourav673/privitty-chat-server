@@ -28,27 +28,68 @@
                 background-size: 100% 100%;
             }
         }
-        
+        .heading::after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;  /* Full width */
+            height: 2px;  /* Height of the underline */
+            background-color: rgb(255, 255, 255);  /* Color of the underline */
+        }
+        .animate{
+            opacity: 0;
+            transform: translateY(30px); /* Initially hide the boxes */
+            animation: fadeInUp 1s forwards; /* Apply the animation */
+            animation-timeline: view();
+            animation-range: contain;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Animating with different delays for each box */
+        .animate:nth-child(1) {
+            animation-delay: 0;
+        }
+
+        .animate:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .animate:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .animate:nth-child(4) {
+            animation-delay: 0.9s;
+        }
     </style>
 </head>
 <body class="bg-black flex relative">
     <main class="w-full h-full flex flex-col px-40 py-6 w-[1000px] mx-auto gap-10 bg-[url('./img/background2.svg')] bg-cover">
-            <nav class="flex justify-between h-20 px-6 py-10 rounded-[15px] border-2 border-white border-opacity-10 items-center bg-red-500 bg-gradient-to-b from-[#0B2FB7] to-[#051551] text-white">
-                <div class="flex items-center gap-3"><img src="./img/privitty-logo-white.png" class="h-[60px]" alt=""><img src="./img/privitty-text.png" class="h-[35px]" alt=""></div>
-                <ul class="flex gap-7">
-                    <li>Home</li>
-                    <li>Info</li>
-                    <li>Privacy</li>
-                    <li>Public Code <i>M</i></li>
+            <nav class="flex justify-between h-20 px-6 py-10 rounded-[15px] border-2 border-white border-opacity-10 items-center bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white">
+                <div class="flex items-center gap-3 z-2"><img src="./img/privitty-logo-white.png" class="h-[60px]" alt=""><img src="./img/privitty-text.png" class="h-[35px]" alt=""></div>
+                <ul class="flex gap-7 z-2">
+                    <li class="cursor-pointer">Home</li>
+                    <li class="cursor-pointer">Info</li>
+                    <li class="cursor-pointer">Privacy</li>
+                    <li class="after:content-['_↗'] cursor-pointer">Public Code</li>
                 </ul>
             </nav>
-            <div class="px-6 text-white">
+            <div class="px-6 text-white z-2">
                 <h1 class="text-4xl font-medium">Dear Delta Chat users and newcomers...</h1>
                 <p class="text-xl">Welcome to instant, interoperable and privacy-preserving messaging :)</p>
             </div>
-            <div class="px-6 py-10 bg-[rgba(255,255,255,0.4)] flex items-center rounded-[15px] gap-10 z-1">
+            <div class="px-6 py-10 bg-[rgba(255,255,255,0.4)] flex items-center rounded-[15px] gap-10 z-1 border-white border-2 border-opacity-1">
                 <div>
-                    <a class="bg-[#051551] text-white p-3 rounded-lg cursor-pointer">Get a privitty-demo-server-woen.click chat profile</a>
+                    <a class="bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white p-3 rounded-lg cursor-pointer">Get a privitty-demo-server-woen.click chat profile</a>
                     <br>
                     <br>    
                     <br>
@@ -63,14 +104,35 @@
                 </div>
                 <img src="./img/deltachat-qr.png" class="w-100 h-100 rounded-[15px]" alt="">
             </div>
-            <div class="px-6 flex gap-4 items-center justify-center">
-                    <img src="./img/deltachat-logo.svg" class="w-[100px]" alt="">
-                    <div class="w-[6px] h-24 bg-gradient-to-b from-[#499BFF] to-[#7044E2]"></div>
-                    <img src="./img/privitty-logo-white.png" class="w-[90px]" alt="">
-                    <img src="./img/privitty-text.png" class="w-[250px]" alt="">
+            <div class="px-6 flex gap-4 items-center justify-center z-2 mt-15">
+                    <img src="./img/deltachat-logo.svg" class="w-[100px] animate" alt="">
+                    <div class="w-[6px] h-24 bg-gradient-to-b from-[#499BFF] to-[#7044E2] animate"></div>
+                    <img src="./img/privitty-logo-white.png" class="w-[90px] animate" alt="">
+                    <img src="./img/privitty-text.png" class="w-[250px] animate" alt="">
             </div>
             <div class="reveal-text z-10 w-full flex justify-center items-center">
-                <h2 class="animated-text w-[600px]"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime repellendus inventore ipsum nemo doloremque! Laborum deserunt quisquam eius id qui optio non officiis mollitia odit iure repellendus incidunt adipisci corrupti, saepe minus, minima natus voluptate? Animi fugit nisi iste perspiciatis voluptatum, blanditiis, ea necessitatibus explicabo dolore laudantium accusantium hic!</span></p>
+                <h2 class="animated-text w-[800px] text-justify font-semibold"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime repellendus inventore ipsum nemo doloremque! Laborum deserunt quisquam eius id qui optio non officiis mollitia odit iure repellendus incidunt adipisci corrupti, saepe minus, minima natus voluptate? Animi fugit nisi iste perspiciatis voluptatum, blanditiis, ea necessitatibus explicabo dolore laudantium accusantium hic!</span></p>
+            </div>
+            <div class="px-6 z-2 mt-15">
+                <h1 class="text-5xl w-60 font-bold text-[#fff] relative heading">How to <br>link device</h1>
+
+                <div class="flex gap-10 my-10 items-center justify-center text-white">
+                    <ol class="">
+                        <li>1. Lorem ipsum dolor sit amet.</li>
+                        <br>
+                        <li>2. Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <br>
+                        <li>3. Lorem ipsum dolor sit amet consectetur adipisicing. lorem</li>
+                        <br>
+                        <li>4. Lorem ipsum dolor sit amet consectetur.</li>
+                        <br>
+                        <li>5. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis.</li>
+                        <br>
+                        <li>6. Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
+                        <br>
+                    </ol>
+                    <img src="./img/how-to-use.png" class="w-150" alt="">
+                </div>
             </div>
     </main>
     <img src="./img/Rectangle.svg" class="absolute w-full opacity-25" alt="">
