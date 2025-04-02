@@ -13,6 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        } */
         .reveal-text span {
             color: hsl(0 0% 100% / 0.4);
             background-clip: text;
@@ -74,10 +79,10 @@
 </head>
 <body class="bg-black flex relative">
     <main class="w-full h-full flex flex-col md:px-20 lg:px-50 md:py-4 gap-10 bg-[url('./img/background2.svg')] bg-cover">
-            <nav class="md:flex md:justify-between md:items-center md:px-6 lg:py-2 p-2 relative rounded-[15px] border-2 border-white border-opacity-10 items-center bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white">
+            <nav class="md:flex md:justify-between md:items-center md:px-6 lg:py-2 px-4 py-2 relative rounded-[15px] border-2 border-white border-opacity-10 items-center bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white">
                 <div class="flex justify-between items-center">
-                    <a href="/" class="flex items-center gap-3 z-2"><img src="./img/privitty-logo-white.png" class="h-[60px]" alt=""><img src="./img/privitty-text.png" class="h-[35px] hidden lg:block" alt=""></a>
-                    <span class="text-4xl cursor-pointer z-99 md:hidden block mx-2"><i class="fa-solid fa-bars" onclick="Menu(this)"></i></span>
+                    <a href="/" class="flex items-center gap-3 z-2"><img src="./img/privitty-logo-white.png" class="md:h-16 h-12" alt=""><img src="./img/privitty-text.png" class="h-9 hidden lg:block" alt=""></a>
+                    <span class="text-2xl cursor-pointer z-99 md:hidden block mx-2"><i class="fa-solid fa-bars" onclick="Menu(this)"></i></span>
 
                 </div>
                 <ul class="md:flex md:items-center z-2 md:z-auto md:flex-row flex flex-col md:static w-full left-0 absolute md:w-auto md:opacity-100 opacity-0 top-[-400] ease-in">
@@ -87,11 +92,11 @@
                     <a class="after:content-['_↗'] cursor-pointer lg:ml-5 mx-3 my-3" href="https://github.com/deltachat/chatmail">Public Code</a>
                 </ul>
             </nav>
-            <div class="px-6 text-white z-2">
+            <div class="md:px-6 px-4 text-white z-2">
                 <h1 class="md:text-4xl text-2xl font-medium"><a href="https://www.privittytech.com/" class="hover:underline">Privitty,</a> built on <a href="https://delta.chat" class="hover:underline">Delta Chat</a>...</h1>
-                <p class="md:text-xl text-md">instant, interoperable, privacy-preserving messaging with granular control. Share securely, revoke anytime, from one or all peers.</p>
+                <h2 class="md:text-xl text-sm font-medium">Instant, interoperable, privacy-preserving messaging with granular control. Share securely, revoke anytime, from one or all peers.</h2>
             </div>
-            <div class="px-6 py-10 bg-[rgba(255,255,255,0.4)] flex items-center justify-center md:flex-row flex-col rounded-[15px] gap-10 z-1 border-white border-2 border-opacity-1">
+            <div class="md:px-6 md:py-10 p-4 bg-[rgba(255,255,255,0.4)] flex items-center justify-center md:flex-row flex-col rounded-[15px] gap-10 z-1 border-white border-2 border-opacity-1">
                 <div>
                     <a class="bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white p-3 rounded-lg cursor-pointer" href="dcaccount:https://privitty-demo-server-woen.click/new">Get a privitty-demo-server-woen.click</a>
                     <br>
@@ -108,15 +113,15 @@
                 </div>
                 <img src="./img/deltachat-qr.png" class="w-100 aspect-square rounded-[15px] order-first md:order-last" alt="">
             </div>
-            <div class="md:px-6 flex md:gap-4 gap-1 items-center justify-center z-2 mt-15">
+            <div class="md:px-6 flex md:gap-4 gap-1 items-center justify-center z-2 mt-10">
                     <a href="https://delta.chat" class="animate"><img src="./img/deltachat-logo.svg" class="md:h-24 h-14" alt=""></a>
                     <div class="md:w-[6px] md:h-24 w-1 h-14 bg-gradient-to-b from-[#499BFF] to-[#7044E2] animate"></div>
-                    <a href="https://privittytech.com/" class="animate"><img src="./img/privitty-logo-white.png" class="md:h-24 h-14" alt=""></a>
-                    <a href="https://privittytech.com/" class="animate"><img src="./img/privitty-text.png" class="md:h-16 h-10" alt=""></a>
+                    <a href="https://www.privittytech.com/" class="animate"><img src="./img/privitty-logo-white.png" class="md:h-24 h-14" alt=""></a>
+                    <a href="https://www.privittytech.com/" class="animate"><img src="./img/privitty-text.png" class="md:h-16 h-10" alt=""></a>
             </div>
             <div class="reveal-text z-10 flex justify-center items-center">
-                <h2 class="animated-text md:text-3xl md:w-full w-80 text-sm text-justify font-semibold">
-                    <span>instant, interoperable, privacy-preserving messaging with granular control.
+                <h2 class="animated-text md:text-2xl md:w-[70%] w-80 text-sm text-justify font-medium">
+                    <span>Instant, interoperable, privacy-preserving messaging with granular control.
                         <br>
                         <br>
                         1. Presentation Layer Security Mode: Only the intended recipients can view the data.
@@ -128,11 +133,11 @@
                         Our solution isn’t more locks on the doors; it’s building a door that only you control.
                         <br>
                         <br>
-                        We’re not just adding extra layers of security; we’re enabling users to control their data with certainty. At <a href="privittytech.com" class="hover:underline">Privitty</a>, we believe security should be proactive, not reactive. In an era where trust is the most valuable currency, losing control of your data isn’t an option.
+                        We’re not just adding extra layers of security; we’re enabling users to control their data with certainty. At <a href="https://www.privittytech.com/" class="hover:underline">Privitty</a>, we believe security should be proactive, not reactive. In an era where trust is the most valuable currency, losing control of your data isn’t an option.
                     </span>
                 </h2>
             </div>
-            <div class="px-6 z-2 mt-15">
+            <div class="px-6 z-2 mt-10">
                 <h1 class="text-5xl w-60 font-bold text-[#fff] relative heading">How to <br>link device</h1>
 
                 <div class="flex gap-10 my-10 items-center justify-center md:flex-row flex-col text-white">
