@@ -13,19 +13,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        } */
         .reveal-text span {
-            color: hsl(0 0% 100% / 0.2);
+            color: hsl(0 0% 100% / 0.4);
             background-clip: text;
             background-repeat: no-repeat;
             background-size: 0% 100%;
             background-image: linear-gradient(90deg, white, white);
             animation: reveal-text linear forwards;
-            animation-timeline: view();
+            animation-timeline: view(-30%);
             animation-range: contain;
         }
         @keyframes reveal-text {
@@ -78,27 +73,27 @@
     </style>
 </head>
 <body class="bg-black flex relative">
-    <main class="w-full h-full flex flex-col md:px-50 md:py-6 gap-10 bg-[url('./img/background2.svg')] bg-cover">
-            <nav class="md:flex md:justify-between md:items-center md:px-6 lg:py-4 p-2 relative rounded-[15px] border-2 border-white border-opacity-10 items-center bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white">
+    <main class="w-full h-full flex flex-col md:px-20 lg:px-50 md:py-4 gap-10 bg-[url('./img/background2.svg')] bg-cover">
+            <nav class="md:flex md:justify-between md:items-center md:px-6 lg:py-2 p-2 relative rounded-[15px] border-2 border-white border-opacity-10 items-center bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white">
                 <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3 z-2"><img src="./img/privitty-logo-white.png" class="h-[60px]" alt=""><img src="./img/privitty-text.png" class="h-[35px] hidden lg:block" alt=""></div>
+                    <a href="/" class="flex items-center gap-3 z-2"><img src="./img/privitty-logo-white.png" class="h-[60px]" alt=""><img src="./img/privitty-text.png" class="h-[35px] hidden lg:block" alt=""></a>
                     <span class="text-4xl cursor-pointer z-99 md:hidden block mx-2"><i class="fa-solid fa-bars" onclick="Menu(this)"></i></span>
 
                 </div>
-                <ul class="md:flex md:items-center z-2 md:z-auto md:static w-full left-0 absolute md:w-auto md:opacity-100 opacity-0 top-[-400] ease-in">
-                    <li class="cursor-pointer lg:mx-5 lg:my-0 mx-3 my-6">Home</li>
-                    <li class="cursor-pointer lg:mx-5 lg:my-0 mx-3 my-6">Info</li>
-                    <li class="cursor-pointer lg:mx-5 lg:my-0 mx-3 my-6">Privacy</li>
-                    <li class="after:content-['_↗'] cursor-pointer lg:ml-5 mx-3 my-3">Public Code</li>
+                <ul class="md:flex md:items-center z-2 md:z-auto md:flex-row flex flex-col md:static w-full left-0 absolute md:w-auto md:opacity-100 opacity-0 top-[-400] ease-in">
+                    <a class="cursor-pointer lg:mx-5 lg:my-0 mx-3 my-6" href="/">Home</a>
+                    <a class="cursor-pointer lg:mx-5 lg:my-0 mx-3 my-6" href="/info.html">Info</a>
+                    <a class="cursor-pointer lg:mx-5 lg:my-0 mx-3 my-6" href="/privacy.html">Privacy</a>
+                    <a class="after:content-['_↗'] cursor-pointer lg:ml-5 mx-3 my-3" href="https://github.com/deltachat/chatmail">Public Code</a>
                 </ul>
             </nav>
             <div class="px-6 text-white z-2">
-                <h1 class="text-4xl font-medium">Dear Delta Chat users and newcomers...</h1>
-                <p class="text-xl">Welcome to instant, interoperable and privacy-preserving messaging :)</p>
+                <h1 class="md:text-4xl text-2xl font-medium"><a href="https://www.privittytech.com/" class="hover:underline">Privitty,</a> built on <a href="https://delta.chat" class="hover:underline">Delta Chat</a>...</h1>
+                <p class="md:text-xl text-md">instant, interoperable, privacy-preserving messaging with granular control. Share securely, revoke anytime, from one or all peers.</p>
             </div>
             <div class="px-6 py-10 bg-[rgba(255,255,255,0.4)] flex items-center justify-center md:flex-row flex-col rounded-[15px] gap-10 z-1 border-white border-2 border-opacity-1">
                 <div>
-                    <a class="bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white p-3 rounded-lg cursor-pointer">Get a privitty-demo-server-woen.click</a>
+                    <a class="bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white p-3 rounded-lg cursor-pointer" href="dcaccount:https://privitty-demo-server-woen.click/new">Get a privitty-demo-server-woen.click</a>
                     <br>
                     <br>    
                     <br>
@@ -114,18 +109,33 @@
                 <img src="./img/deltachat-qr.png" class="w-100 aspect-square rounded-[15px] order-first md:order-last" alt="">
             </div>
             <div class="md:px-6 flex md:gap-4 gap-1 items-center justify-center z-2 mt-15">
-                    <img src="./img/deltachat-logo.svg" class="md:h-24 h-14 animate" alt="">
+                    <a href="https://delta.chat" class="animate"><img src="./img/deltachat-logo.svg" class="md:h-24 h-14" alt=""></a>
                     <div class="md:w-[6px] md:h-24 w-1 h-14 bg-gradient-to-b from-[#499BFF] to-[#7044E2] animate"></div>
-                    <img src="./img/privitty-logo-white.png" class="md:h-24 h-14 animate" alt="">
-                    <img src="./img/privitty-text.png" class="md:h-16 h-10 animate" alt="">
+                    <a href="https://privittytech.com/" class="animate"><img src="./img/privitty-logo-white.png" class="md:h-24 h-14" alt=""></a>
+                    <a href="https://privittytech.com/" class="animate"><img src="./img/privitty-text.png" class="md:h-16 h-10" alt=""></a>
             </div>
-            <div class="reveal-text z-10 w-full flex justify-center items-center">
-                <h2 class="animated-text md:text-3xl md:w-[800px] w-85 text-justify font-semibold"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime repellendus inventore ipsum nemo doloremque! Laborum deserunt quisquam eius id qui optio non officiis mollitia odit iure repellendus incidunt adipisci corrupti, saepe minus, minima natus voluptate? Animi fugit nisi iste perspiciatis voluptatum, blanditiis, ea necessitatibus explicabo dolore laudantium accusantium hic!</span></p>
+            <div class="reveal-text z-10 flex justify-center items-center">
+                <h2 class="animated-text md:text-3xl md:w-full w-80 text-sm text-justify font-semibold">
+                    <span>instant, interoperable, privacy-preserving messaging with granular control.
+                        <br>
+                        <br>
+                        1. Presentation Layer Security Mode: Only the intended recipients can view the data.
+                        <br>
+                        <br>
+                        2. True Revoke Mode: Wherever your data travels, no matter where it’s stored, you can instantly make it inaccessible, ensuring compliance is baked in.
+                        <br>
+                        <br>
+                        Our solution isn’t more locks on the doors; it’s building a door that only you control.
+                        <br>
+                        <br>
+                        We’re not just adding extra layers of security; we’re enabling users to control their data with certainty. At Privitty, we believe security should be proactive, not reactive. In an era where trust is the most valuable currency, losing control of your data isn’t an option.
+                    </span>
+                </h2>
             </div>
             <div class="px-6 z-2 mt-15">
                 <h1 class="text-5xl w-60 font-bold text-[#fff] relative heading">How to <br>link device</h1>
 
-                <div class="flex gap-10 my-10 items-center justify-center text-white">
+                <div class="flex gap-10 my-10 items-center justify-center md:flex-row flex-col text-white">
                     <ol class="">
                         <li>1. Lorem ipsum dolor sit amet.</li>
                         <br>
@@ -140,21 +150,11 @@
                         <li>6. Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
                         <br>
                     </ol>
-                    <img src="./img/how-to-use.png" class="w-150" alt="">
+                    <img src="./img/how-to-use.png" class="w-150 md:order-last order-first" alt="">
                 </div>
             </div>
     </main>
     <img src="./img/Rectangle.svg" class="absolute w-full opacity-25" alt="">
-
-<!-- <ul id="menu">
-    <li><a href="index.html">home</a></li>
-    <li><a href="info.html">info</a></li>
-    <li><a href="privacy.html">privacy</a></li>
-    <li><a href="https://github.com/deltachat/chatmail">public code ↗</a></li>
-    <li id="domain"><a href="index.html">{{ config.mail_domain }}</a></li> -->
-</ul>
-
-<!-- {{ markdown_html }} -->
 <script>
     function Menu(e){
         e.classList.toggle("fa-xmark");
@@ -170,6 +170,5 @@
         menu.classList.toggle("duration-500");
     }
 </script>
-
 </body>
 </html>
