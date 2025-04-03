@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="icon" href="/img/privitty-logo.png">
     <link rel=”mask-icon” href=”/img/privitty-logo.png” color=”#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        } */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         .reveal-text span {
             color: hsl(0 0% 100% / 0.4);
             background-clip: text;
@@ -25,7 +24,7 @@
             background-size: 0% 100%;
             background-image: linear-gradient(90deg, white, white);
             animation: reveal-text linear forwards;
-            animation-timeline: view(-30%);
+            animation-timeline: view(-10%);
             animation-range: contain;
         }
         @keyframes reveal-text {
@@ -77,9 +76,9 @@
         }
     </style>
 </head>
-<body class="bg-black flex relative">
+<body class="bg-black flex relative font-[Raleway]">
     <main class="w-full h-full flex flex-col md:px-20 lg:px-50 md:py-4 gap-10 bg-[url('./img/background2.svg')] bg-cover">
-            <nav class="md:flex md:justify-between md:items-center md:px-6 lg:py-2 px-4 py-2 relative rounded-[15px] border-2 border-white border-opacity-10 items-center bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white">
+            <nav class="md:flex md:justify-between md:items-center md:px-6 lg:py-2 px-4 py-2 relative rounded-[15px] border-2 border-white border-opacity-10 items-center bg-radial-[at_50%_75%] from-[#7044E2] via-blue-600 to-indigo-500 to-90% text-white">
                 <div class="flex justify-between items-center">
                     <a href="/" class="flex items-center gap-3 z-2"><img src="./img/privitty-logo-white.png" class="md:h-16 h-12" alt=""><img src="./img/privitty-text.png" class="h-9 hidden lg:block" alt=""></a>
                     <span class="text-2xl cursor-pointer z-99 md:hidden block mx-2"><i class="fa-solid fa-bars" onclick="Menu(this)"></i></span>
@@ -93,12 +92,12 @@
                 </ul>
             </nav>
             <div class="md:px-6 px-4 text-white z-2">
-                <h1 class="md:text-4xl text-2xl font-medium"><a href="https://www.privittytech.com/" class="hover:underline">Privitty,</a> built on <a href="https://delta.chat" class="hover:underline">Delta Chat</a>...</h1>
-                <h2 class="md:text-xl text-sm font-medium">Instant, interoperable, privacy-preserving messaging with granular control. Share securely, revoke anytime, from one or all peers.</h2>
+                <h1 class="md:text-4xl text-2xl pb-2 font-medium text-justify"><a href="https://www.privittytech.com/" class="underline">Privitty,</a> built on <a href="https://delta.chat" class="underline">Delta Chat</a> -- instant, interoperable, privacy-preserving messaging with granular control.</h1>
+                <h2 class="md:text-xl text-sm font-medium">Share securely, revoke anytime, from one or all peers. For details how it avoids storing personal information please see our privacy policy  </h2>
             </div>
             <div class="md:px-6 md:py-10 p-4 bg-[rgba(255,255,255,0.4)] flex items-center justify-center md:flex-row flex-col rounded-[15px] gap-10 z-1 border-white border-2 border-opacity-1">
                 <div>
-                    <a class="bg-gradient-to-b from-[#0B2FB7] to-[#7044E2] text-white p-3 rounded-lg cursor-pointer" href="dcaccount:https://privitty-demo-server-woen.click/new">Get a privitty-demo-server-woen.click</a>
+                    <a class="bg-radial-[at_50%_75%] from-[#7044E2] via-blue-600 to-indigo-500 to-90% text-white p-3 rounded-lg cursor-pointer" href="dcaccount:https://privitty-demo-server-woen.click/new">Get a privitty-demo-server-woen.click</a>
                     <br>
                     <br>    
                     <br>
@@ -106,10 +105,10 @@
                     <br>
                     <p>🐣 Choose your Avatar and Name</p>
                     <br>
-                    <p>💬 Start chatting with any Delta Chat contacts using QR invite codes</p>
+                    <p>💬 Start chatting with any Delta Chat contacts using <a href="https://delta.chat/en/help#howtoe2ee" class="hover:underline">QR invite codes</a></p>
                     <br>
                     <br>
-                    <a class="cursor-pointer">Need Help getting started?</a>
+                    <a class="cursor-pointer hover:underline" href="#how-to-use">Need Help getting started?</a>
                 </div>
                 <img src="./img/deltachat-qr.png" class="w-100 aspect-square rounded-[15px] order-first md:order-last" alt="">
             </div>
@@ -120,7 +119,7 @@
                     <a href="https://www.privittytech.com/" class="animate"><img src="./img/privitty-text.png" class="md:h-16 h-10" alt=""></a>
             </div>
             <div class="reveal-text z-10 flex justify-center items-center">
-                <h2 class="animated-text md:text-2xl md:px-30 px-4 text-sm text-justify font-medium">
+                <h2 class="animated-text md:text-xl md:px-30 px-5 text-sm text-justify font-medium">
                     <span>Instant, interoperable, privacy-preserving messaging with granular control.
                         <br>
                         <br>
@@ -137,8 +136,8 @@
                     </span>
                 </h2>
             </div>
-            <div class="md:px-6 px-4 z-2 mt-10">
-                <h1 class="text-5xl w-60 font-bold text-[#fff] relative heading">How to <br>link device</h1>
+            <div class="md:px-6 px-4 z-2 mt-10" id="how-to-use">
+                <h1 class="text-5xl w-70 font-bold text-[#fff] relative heading">How to <br>link device</h1>
 
                 <div class="flex gap-10 my-10 items-center justify-center md:flex-row flex-col text-white">
                     <ol class="">
@@ -159,7 +158,7 @@
                 </div>
             </div>
     </main>
-    <img src="./img/Rectangle.svg" class="absolute w-full opacity-25 bg-repeat" alt="">
+    <img src="./img/Rectangle.svg" class="absolute w-full opacity-25" alt="">
 <script>
     function Menu(e){
         e.classList.toggle("fa-xmark");
